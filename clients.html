@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Clients — Gandaki Overseas Concern Pvt. Ltd.</title>
+<meta name="description" content="Over 120 reputable clients served by GOC across the UAE, Qatar, Kuwait, Oman, Saudi Arabia and Malaysia.">
+<link rel="icon" href="assets/goc-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=15">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="badges">
+      <span><span class="dot"></span> Govt. Licence No.: <strong>115/055/056</strong></span>
+      <span><span class="dot"></span> CR No.: <strong>9177/055/56</strong></span>
+      <span class="certlink" role="button" tabindex="0" title="View our ISO 9001 certificate"><span class="dot"></span> <strong>ISO 9001</strong> Certified Company</span>
+    </div>
+    <div class="badges">
+      <span>☏ +977 1 4595749</span>
+      <span>✉ goc@ntc.net.np</span>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/goc-logo.png" alt="GOC — Gandaki Overseas Concern Pvt. Ltd. logo">
+      <span class="bt"><b>Gandaki Overseas Concern</b><small>Recruitment from Nepal · Since 1998</small></span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+    <ul class="navlinks" id="nl">
+      <li><a href="about.html">About</a></li>
+      <li><a href="why-nepal.html">Why Nepal</a></li>
+      <li><a href="workforce.html">Workforce</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="employers.html">For Employers</a></li>
+      <li><a class="active" href="clients.html">Clients</a></li>
+      <li><a class="cta" href="index.html#contact">Hire from Nepal</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <h1>Our Reputable Clients</h1>
+    <p>Trusted across the Gulf and Malaysia — an ever-growing list of satisfied clients is the testimony on which GOC stands.</p>
+  </div>
+</header>
+
+<section class="deploy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Where We Deploy</span>
+      <h2>From Nepal to six destination countries across the Gulf and Southeast Asia.</h2>
+    </div>
+    <div class="mapwrap reveal">
+      <div class="mapstage">
+        <img src="assets/deploy-map.svg?v=2" alt="Map showing worker deployment from Nepal to the UAE, Qatar, Kuwait, Oman, Saudi Arabia and Malaysia">
+        <div class="maphot" style="left:35.04%;top:32.21%" data-country="Kuwait"></div>
+        <div class="maphot" style="left:33.65%;top:38.5%" data-country="Saudi Arabia"></div>
+        <div class="maphot" style="left:37.19%;top:37.42%" data-country="Qatar"></div>
+        <div class="maphot" style="left:38.83%;top:38.71%" data-country="United Arab Emirates"></div>
+        <div class="maphot" style="left:39.96%;top:42.21%" data-country="Oman"></div>
+        <div class="maphot" style="left:67.02%;top:63.5%" data-country="Malaysia"></div>
+        <div class="maphot lab" style="left:32.1%;top:29.9%;width:5.5%" data-country="Kuwait"></div>
+        <div class="maphot lab" style="left:33.3%;top:43.3%;width:9.5%" data-country="Saudi Arabia"></div>
+        <div class="maphot lab" style="left:34.5%;top:38.7%;width:4.5%" data-country="Qatar"></div>
+        <div class="maphot lab" style="left:41.2%;top:36.9%;width:3.8%" data-country="United Arab Emirates"></div>
+        <div class="maphot lab" style="left:42.8%;top:45.1%;width:4.8%" data-country="Oman"></div>
+        <div class="maphot lab" style="left:67.0%;top:68.3%;width:7%" data-country="Malaysia"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="wrap">
+    <div class="tabs reveal" id="tabs"></div>
+    <div id="panes" class="reveal"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Gandaki Overseas Concern Pvt. Ltd.</b>
+      Buddhanagar, Kathmandu, Nepal · Licence No. 115/055/056 · CR No. 9177/055/56
+    </div>
+    <div class="tag">"Providing Right Solution…"</div>
+  </div>
+</footer>
+
+<script>
+const CLIENTS = {
+  "United Arab Emirates": ["Fairmont Bab Al Bahr – Abu Dhabi (5★ Hotel)","Pavilion Food","London Fish and Chips","China Palace Restaurants","The Grooming Company","Zawya Supermarket","The Wok House","Mohammed Al Mojil Group – Abu Dhabi","Seah Steel (Factory)","Hanmeak (Fabrication Factory)","SK Engineering & Construction","DS Engineering & Construction","Black Panther Security Services","Insight Cleaning & Security Services","Tasameem STX Construction","Doosan Heavy Industries","Land Mark Security","Al Barari Group","Al Fahim Group","Al Dar Ready Mix","Ready Mix Abu Dhabi","Transgulf Ready Mix","Jong Hap Electrical and Mechanical","Hanbo Engg & Construction","Kumyang","Samchhang Enterprise Co Ltd","Sambo E & C Co. Ltd.","Bin Touq Fire and Safety","INTS Technical Services","Elite Star Catering LLC – Branch","Al Budooa Al Mutkasesah Gen Maint LLC"],
+  "Qatar": ["Upgrade Construction","Qatar Express Transport Co","Project Services Co – Qatar W.L.L.","Fokland Trading and Contracting","Qatar Space Technology","Eunsung Qatar","Specialised Aluminum (SASCO)","Shannon Engineering","KRV Technical Services","Al Sultan Cleaning Co","Triple Force Real Estate","Amwaz Catering","Qatar Furniture Services","Oryx Engineering Solution","Doha Enterprises"],
+  "Kuwait": ["United Facilities Management (UFM)","L'Opera Café and Restaurant","Darawaza Company for Logistics Services","Geowash International","Al Ruwad Environmental Services Center","Nolato Saloon and Spa","Najmat Al Wesam Consumer Order Delivery Company","Blue Sea Trading LLC","Kuwaiti Territorial Co. for Building, Road & City Cleaning","Ocado for Pastry & Sweet Company","Raghad Hotel Flats Company","Al-Jazira International General Trading and Contracting Co."],
+  "Oman": ["Alfatah Star Investment","Glow Services Trading","Qaria Al-Ulia Trad","Modern Island Waves SPC","Fifth Vision SPC","Dalia Integrated Enterprises LLC","Al Muharrami International LLC","Al Ejadah for Marketing & Services"],
+  "Saudi Arabia": ["Bidaa Aldhahabiya Est. for Trading","Naseem Al Buhaira Restaurant for Catering Co.","Soft Cut Contracting Co","Branch of SEPCO Electric Power Construction Co.","ALUPCO Aluminium Products Company Ltd.","Interpolar Arabian Company LLC","Al-Qahtani PCK Pipe Company Ltd.","Saud Musa Al-Hadeers Co & Partnership Company Ltd.","Petropan General Contracting Company Ltd","Diamond Summit Fast Food Restaurant","Future Makers Company Limited","Baby Mudhi Al Quraini Contracting Company","iMile Saudi Logistics Services Company","Sultan Khalaf Saud Al-Banaqi Est General Contracting","Al Dam Al Muhtaraf Co. Operation and Maintenance","Youssef Abdullah Jabbara Contracting Company","Jawharat Al-Modon Corporation for Operation and Maintenance","SASS Development Company for Operation and Maintenance","Branch of Woosun Energy & Construction Co. Ltd.","Asas Shar Foundation for Operation and Maintenance","Ikon Al Arabi Catering Services","Ninety Nine Restaurant to Serve Meal","Knight Crown General Contracting Co LLC","Interlink Arabia","Ramz Al Arobah Cement Products","Almokbil for Trading Co.","Fahad Sayah Al Mutairi Gen Contracting Est.","Metal Design Factory"],
+  "Malaysia": ["Metech Kenzai","Panasonic","Aman Security","Lion Heart Security","Arrow Shield Security","ATA Industrial","Grimme Clean Maintenance","Central Aluminum","Asia Agriculture Chemicals","Maruwa Electronics","Felda Group","IOI Group","Chin Herr","Tesco Supermarket","Jesco Supermarket","Asia Restaurant","Everplas Industries","Team Components","Sheng Li Farm","Winwa Medical","Jooi Brothers","Harta Packaging","Poh Giap Cycle","Shangbor Plastics","Medical Rubber Factory"]
+};
+const FLAGS = {"United Arab Emirates":"🇦🇪","Qatar":"🇶🇦","Kuwait":"🇰🇼","Oman":"🇴🇲","Saudi Arabia":"🇸🇦","Malaysia":"🇲🇾"};
+const tabsEl = document.getElementById('tabs');
+const panesEl = document.getElementById('panes');
+Object.entries(CLIENTS).forEach(([country, list], i) => {
+  const tab = document.createElement('button');
+  tab.className = 'tab' + (i===0 ? ' active' : '');
+  tab.innerHTML = `${FLAGS[country]||''} ${country} <span class="n">(${list.length})</span>`;
+  tab.onclick = () => {
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.clientpane').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('pane-'+i).classList.add('active');
+  };
+  tabsEl.appendChild(tab);
+  const pane = document.createElement('div');
+  pane.className = 'clientpane' + (i===0 ? ' active' : '');
+  pane.id = 'pane-'+i;
+  pane.innerHTML = '<div class="client-grid">' + list.map(c=>`<span>${c}</span>`).join('') + '</div>';
+  panesEl.appendChild(pane);
+});
+
+// map hotspots: hover shows that country's clients, click opens its tab
+const countryIndex = Object.keys(CLIENTS);
+document.querySelectorAll('.maphot').forEach(hot => {
+  const country = hot.dataset.country;
+  const list = CLIENTS[country] || [];
+  const tip = document.createElement('div');
+  tip.className = 'tip';
+  tip.innerHTML = `<b>${country}</b><small>${list.length} client companies</small><ul>` +
+    list.map(c => `<li>${c}</li>`).join('') + '</ul>';
+  hot.appendChild(tip);
+  hot.addEventListener('click', () => {
+    const i = countryIndex.indexOf(country);
+    if (i < 0) return;
+    document.querySelectorAll('.tab')[i].click();
+    document.getElementById('tabs').scrollIntoView({behavior: 'smooth', block: 'center'});
+  });
+});
+</script>
+<script src="site.js?v=15"></script>
+</body>
+</html>
