@@ -269,6 +269,19 @@ footer .tag{font-style:italic;font-family:var(--serif);color:var(--orange)}
 .faq .a{padding:16px 22px 20px;font-size:14.5px;color:#33463a;animation:acc .3s ease}
 .faq .a a{font-weight:600}
 
+/* licences & certifications */
+.creds{background:var(--paper)}
+.cred-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.cred{background:var(--cream);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.cred .thumb{display:block;width:100%;aspect-ratio:4/3;border:none;padding:12px;background:#fff;border-bottom:1px solid var(--line);cursor:zoom-in}
+.cred .thumb img{width:100%;height:100%;object-fit:contain;transition:transform .3s}
+.cred button.thumb:hover img{transform:scale(1.04)}
+.cred .thumb.noimg{cursor:default;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#eef6e4,#ddefcc);text-align:center;font-family:var(--serif);font-weight:700;font-size:17px;color:var(--green-deep);line-height:1.35}
+.cred .body{padding:16px 18px 20px}
+.cred h3{font-size:16.5px;margin-bottom:4px}
+.cred small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--orange-deep);font-weight:700;margin-bottom:8px}
+.cred p{font-size:13.5px;color:var(--muted)}
+
 /* certificate lightbox */
 .certlink{cursor:pointer;color:#fff;font-weight:600;border-bottom:1px dotted #a9cbb6;padding-bottom:1px}
 .certlink:hover{border-bottom-color:#fff}

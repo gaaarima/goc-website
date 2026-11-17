@@ -16,20 +16,28 @@ fab.title = 'Email Gandaki Overseas Concern';
 fab.innerHTML = '<span class="ic">✉</span><span class="t">Email Us</span>';
 document.body.appendChild(fab);
 
-// ISO certificate lightbox
-const certLinks = document.querySelectorAll('.certlink');
+// certificate lightbox: .certlink opens the ISO certificate, [data-cert] opens its own image
+const ISO_SRC = 'assets/iso-9001.jpg';
+const ISO_CAP = 'QSI ISO 9001:2000 — Quality Management System certificate, Gandaki Overseas Concern (P) Ltd.';
+const certLinks = document.querySelectorAll('.certlink, [data-cert]');
 if (certLinks.length) {
   const lb = document.createElement('div');
   lb.className = 'lightbox';
   lb.innerHTML = '<div class="box"><button class="x" aria-label="Close">✕</button>' +
-    '<img src="assets/iso-9001.jpg" alt="QSI ISO 9001:2000 certificate issued to Gandaki Overseas Concern (P) Ltd.">' +
-    '<div class="cap">QSI ISO 9001:2000 — Quality Management System certificate, Gandaki Overseas Concern (P) Ltd.</div></div>';
+    '<img src="" alt=""><div class="cap"></div></div>';
   document.body.appendChild(lb);
-  const open = () => lb.classList.add('show');
+  const img = lb.querySelector('img');
+  const cap = lb.querySelector('.cap');
+  const open = el => {
+    img.src = el.dataset.cert || ISO_SRC;
+    cap.textContent = el.dataset.cap || ISO_CAP;
+    img.alt = cap.textContent;
+    lb.classList.add('show');
+  };
   const close = () => lb.classList.remove('show');
   certLinks.forEach(el => {
-    el.addEventListener('click', open);
-    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    el.addEventListener('click', () => open(el));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(el); } });
   });
   lb.addEventListener('click', e => { if (e.target === lb) close(); });
   lb.querySelector('.x').addEventListener('click', close);
