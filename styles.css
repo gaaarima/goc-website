@@ -30,9 +30,10 @@ h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--green-ink)}
 .topbar .badges{display:flex;gap:14px;flex-wrap:wrap}
 .topbar .badges > span{display:inline-flex;align-items:center;gap:6px}
 .topbar .sm{display:none}
-.topbar .contact a{display:inline-flex;align-items:center;gap:6px;color:inherit;text-decoration:none}
-.topbar .contact a:hover{color:#fff}
-.topbar .contact svg{width:14px;height:14px;fill:currentColor;flex:none}
+.topbar .contact{gap:18px}
+.topbar .contact a{display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:500;text-decoration:none;line-height:1}
+.topbar .contact a:hover{color:var(--orange)}
+.topbar .contact svg{width:17px;height:17px;fill:var(--orange);flex:none;display:block}
 @media (max-width:600px){
   .topbar{font-size:11px;letter-spacing:0}
   .topbar .wrap{flex-wrap:nowrap;gap:8px;padding-top:6px;padding-bottom:6px}
@@ -43,8 +44,8 @@ h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--green-ink)}
   .topbar .sm{display:inline}
   .topbar .certlink{border-bottom:none}
   .topbar .contact{gap:6px;flex:none}
-  .topbar .contact a{width:28px;height:28px;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1)}
-  .topbar .contact svg{width:14px;height:14px}
+  .topbar .contact a{width:30px;height:30px;justify-content:center;border-radius:50%;background:rgba(255,255,255,.12)}
+  .topbar .contact svg{width:16px;height:16px}
 }
 @media (max-width:360px){.topbar .badges > span:nth-child(2){display:none}}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block}
