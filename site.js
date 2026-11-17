@@ -8,13 +8,24 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 document.querySelectorAll('#nl a').forEach(a =>
   a.addEventListener('click', () => document.getElementById('nl').classList.remove('open')));
 
-// floating email button (bottom right, all pages)
+// floating buttons (bottom right, all pages): Hire from Nepal (phones only) + email
+const fabs = document.createElement('div');
+fabs.className = 'fabs';
+const navCta = document.querySelector('.navlinks .cta');
+if (navCta) {
+  const hire = document.createElement('a');
+  hire.className = 'fab-hire';
+  hire.href = navCta.getAttribute('href');
+  hire.textContent = 'Hire from Nepal';
+  fabs.appendChild(hire);
+}
 const fab = document.createElement('a');
 fab.className = 'fab';
 fab.href = 'mailto:goc@ntc.net.np?subject=' + encodeURIComponent('Workforce Enquiry — via gocnepal.com');
 fab.title = 'Email Gandaki Overseas Concern';
 fab.innerHTML = '<span class="ic">✉</span><span class="t">Email Us</span>';
-document.body.appendChild(fab);
+fabs.appendChild(fab);
+document.body.appendChild(fabs);
 
 // certificate lightbox: .certlink opens the ISO certificate, [data-cert] opens its own image
 const ISO_SRC = 'assets/iso-9001.jpg';
